@@ -1,0 +1,14 @@
+{
+  "name": "athens-to-crete",
+  "owner": {
+    "name": "Dominikos Pritis",
+    "email": "dominikos@myroomieapp.com"
+  },
+  "plugins": [
+    {
+      "name": "crete",
+      "source": "./",
+      "description": "Athens to Crete: integration-first engineering methodology - don't build roads across seas, use boats."
+    }
+  ]
+}
