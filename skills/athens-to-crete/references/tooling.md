@@ -2,6 +2,10 @@
 
 **Bleeding edge is a feature, not a bug.** In the AI landscape, software development moves fast - stay ahead of the curve even if it means hitting new issues first. Never downgrade versions of languages, tools, or libraries. Continuously evaluate more modern alternatives.
 
+- For dev tooling (linters, formatters, bundlers, test runners), prefer the latest including prereleases when they're the project's chosen stack; apply the same logic to production dependencies and runtimes
+- Don't upgrade or downgrade dependencies as a side effect of an unrelated task - propose upgrades separately
+- When an upgrade brings breaking API changes, adapt the code in place - no compatibility shims
+
 ## General
 
 - Use mise for package and library management

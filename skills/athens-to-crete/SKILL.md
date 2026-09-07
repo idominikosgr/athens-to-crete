@@ -16,6 +16,18 @@ You're in Athens and need to reach Crete. The naive approach: build a road - imp
 3. Identify existing solutions in the codebase
 4. Verify the path is complete end-to-end
 
+These guidelines bias toward caution over speed - for trivial tasks, use judgment.
+
+## Simplicity First
+
+Minimum code that solves the problem. Nothing speculative.
+
+- No features beyond what was asked
+- No abstractions for single-use code
+- No "flexibility" or "configurability" that wasn't requested
+- No error handling for impossible scenarios
+- If you write 200 lines and it could be 50, rewrite it
+
 ## Method
 
 ### Before Writing Code
@@ -24,6 +36,21 @@ You're in Athens and need to reach Crete. The naive approach: build a road - imp
 - Search the codebase for similar functionality before creating new
 - Understand how domains interconnect and where this work fits
 - Verify assumptions by checking, not guessing
+
+### Ambiguity
+
+- If the request is unclear and the choice materially affects the outcome, ask
+- If multiple interpretations exist, present them - don't pick silently
+- If a simpler approach exists than the one requested, say so - push back when warranted
+- Otherwise pick a reasonable default, state your assumptions explicitly, and proceed
+
+### Scope Discipline
+
+- Every changed line should trace directly to the request
+- If you find a larger architectural problem, fix it only if it blocks the task; otherwise flag it and leave it
+- Never expand a bug fix into a module rewrite unprompted
+- Don't "improve" adjacent code, comments, or formatting; match existing style
+- Clean up orphans YOUR changes created; mention pre-existing dead code - don't delete it unless asked
 
 ### When Implementing
 
@@ -40,6 +67,20 @@ You're in Athens and need to reach Crete. The naive approach: build a road - imp
 - Expose features across TUI, CLI, UI, and API where applicable
 - Domains must be able to call each other's functionality
 - No siloed components
+
+### Definition of Done
+
+- Translate the task into verifiable goals before starting: "add validation" → tests for invalid inputs pass; "fix the bug" → a reproducing test passes; "refactor X" → same tests pass before and after
+- Write tests for new functionality and bug fixes; for a bug, first write the test that reproduces it
+- The project builds and the relevant tests pass - run them, don't assume; no new lint or type errors
+- Pre-existing failures unrelated to your change: report them, don't silently fix or ignore them
+- Never report "done" on work you haven't verified
+
+### Commits
+
+- Never add yourself as co-author
+- Commit only when asked, or when the task explicitly requires it; atomic commits with conventional messages (`feat:`, `fix:`, `refactor:`, `docs:`, `test:`, `chore:`) describing both the change and its effect
+- Never force-push to main/master, never use `--no-verify`, never commit secrets
 
 ## Quality Bar
 
