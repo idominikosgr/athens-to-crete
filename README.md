@@ -44,19 +44,19 @@ The commands orchestrate these in sequence; each agent is also independently inv
 
 ```
 /plugin marketplace add idominikosgr/athens-to-crete
-/plugin install crete
+/plugin install crete@athens-to-crete
 ```
 
-Or for local development: `claude plugin add ./` from this repo, or add the repo path as a local marketplace.
+For local development, run `claude --plugin-dir ./` from this repo, or add the repo path as a local marketplace (`/plugin marketplace add ./`).
 
 ## Install (Codex)
 
 ```bash
-./scripts/install-codex.sh    # symlinks commands into ~/.codex/prompts as /crete-*
+./scripts/install-codex.sh    # copies commands into ~/.codex/prompts as /prompts:crete-*
 cp AGENTS.md <your-project>/  # the methodology itself, agent-agnostic
 ```
 
-Codex has no subagents; AGENTS.md includes an inline-phase mapping for each agent reference.
+Codex has no subagents; AGENTS.md includes an inline-phase mapping for each agent reference. Re-run the install script after updating this repo.
 
 ## Works with mnemosyne
 

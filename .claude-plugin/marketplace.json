@@ -4,6 +4,9 @@
     "name": "Dominikos Pritis",
     "email": "dominikos@myroomieapp.com"
   },
+  "metadata": {
+    "description": "Athens to Crete: integration-first engineering methodology for Claude Code."
+  },
   "plugins": [
     {
       "name": "crete",

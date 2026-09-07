@@ -1,6 +1,6 @@
 {
   "name": "crete",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Athens to Crete: an integration-first engineering methodology. Commands, agents, and a skill that prevent disconnected implementations - understand the real problem, use existing paths, ship coherent end-to-end solutions.",
   "author": {
     "name": "Dominikos Pritis",

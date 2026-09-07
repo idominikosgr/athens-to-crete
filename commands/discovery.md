@@ -52,6 +52,6 @@ Write (or update) `product-understanding.md` at the project root containing:
 - **Constraints**: technical and product realities that shape solutions
 - **Opportunities**: gaps worth closing, ranked by user impact
 
-This file is the anchor other crete commands (`/crete:refocus`, `/crete:review-approach`) read for user context. Keep it current.
+This file is the anchor other crete commands (`/crete:start-session`, `/crete:refocus`, `/crete:review-approach`) read for user context. Keep it current.
 
 **Durable memory (if a persistent memory directory is available):** distill the 2-4 most load-bearing discoveries into individual memory files (`type: project`) so future sessions - and mnemosyne recall - surface them automatically.
