@@ -1,0 +1,31 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+      - name: Validate plugin manifest and hooks
+        run: claude plugin validate .claude-plugin/plugin.json
+      - name: Validate marketplace, agents, commands, skills (strict)
+        run: |
+          claude plugin validate --strict .
+          claude plugin validate --strict agents
+          claude plugin validate --strict commands
+          claude plugin validate --strict skills
+      - name: Codex installer dry run
+        run: |
+          bash -n scripts/install-codex.sh
+          CODEX_HOME="$RUNNER_TEMP/codex" bash scripts/install-codex.sh
+          test "$(ls "$RUNNER_TEMP/codex/prompts" | wc -l)" -eq "$(ls commands/*.md | wc -l)"
+          ! grep -rq '/crete:' "$RUNNER_TEMP/codex/prompts"
