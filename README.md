@@ -1,3 +1,9 @@
+---
+id: 01M2NDNGTH0RCVQVG7QVG8T75Q
+type: page
+title: Athens to Crete
+---
+
 # Athens to Crete
 
 An integration-first engineering methodology, packaged as the **crete** plugin for Claude Code and as portable prompts for Codex and other AGENTS.md-aware tools.
@@ -18,18 +24,18 @@ scripts/            install-codex.sh
 
 ### Commands
 
-| Command | Phase | What it does |
-|---|---|---|
-| `/crete:start-session` | kickoff | Load project context before any coding |
-| `/crete:discovery` | kickoff | Map workflows and current state; writes `product-understanding.md` |
-| `/crete:think-first <feature>` | before code | Problem analysis via solution-architect; blueprint before implementation |
-| `/crete:review-approach` | before code | Build / don't build / redesign recommendation |
-| `/crete:build-connected <feature>` | build | Full pipeline: architecture → strategy → implement → validate → flow-test |
-| `/crete:implement [story]` | build | Implementation mode with quality gates |
-| `/crete:refocus` | drift | Reset when execution loses the real problem |
-| `/crete:validate-coherence <area>` | after code | Completeness and connectivity check |
-| `/crete:find-orphans` | after code | Dead/disconnected code scan |
-| `/crete:project-synthesis <project>` | whole project | Reconcile docs, code, and vision into a coherent plan |
+| Command                              | Phase         | What it does                                                              |
+| ------------------------------------ | ------------- | ------------------------------------------------------------------------- |
+| `/crete:start-session`               | kickoff       | Load project context before any coding                                    |
+| `/crete:discovery`                   | kickoff       | Map workflows and current state; writes `product-understanding.md`        |
+| `/crete:think-first <feature>`       | before code   | Problem analysis via solution-architect; blueprint before implementation  |
+| `/crete:review-approach`             | before code   | Build / don't build / redesign recommendation                             |
+| `/crete:build-connected <feature>`   | build         | Full pipeline: architecture → strategy → implement → validate → flow-test |
+| `/crete:implement [story]`           | build         | Implementation mode with quality gates                                    |
+| `/crete:refocus`                     | drift         | Reset when execution loses the real problem                               |
+| `/crete:validate-coherence <area>`   | after code    | Completeness and connectivity check                                       |
+| `/crete:find-orphans`                | after code    | Dead/disconnected code scan                                               |
+| `/crete:project-synthesis <project>` | whole project | Reconcile docs, code, and vision into a coherent plan                     |
 
 ### Agents
 

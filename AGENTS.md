@@ -1,3 +1,9 @@
+---
+id: 01M2NDNG2HZEN13SSW3Y8A6CQT
+type: page
+title: Athens to Crete - Engineering Playbook
+---
+
 # Athens to Crete - Engineering Playbook
 
 Agent-agnostic instructions (Codex, Claude Code, and any AGENTS.md-aware tool). Copy this file into a project root, or merge it into an existing AGENTS.md.

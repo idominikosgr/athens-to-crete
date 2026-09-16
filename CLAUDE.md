@@ -1,3 +1,9 @@
+---
+id: 01M2NDNGG8EG9T51HHJYESB8KC
+type: page
+title: Working on this repo
+---
+
 # Working on this repo
 
 This repo IS the crete plugin - the Athens to Crete methodology packaged for Claude Code (and, via AGENTS.md + scripts/install-codex.sh, for Codex). The methodology content itself lives in:
